@@ -30,7 +30,7 @@ import java.util.List;
 
 public class Perfil extends AppCompatActivity {
 
-    Button logout;
+    Button logout, mapa;
     TextView nombre,ap_p,ap_m,correo;
     ListView lv_garantia;
 
@@ -53,10 +53,16 @@ public class Perfil extends AppCompatActivity {
         ap_m = findViewById(R.id.lbl_ap_m);
         correo = findViewById(R.id.lbl_correo);
         lv_garantia = findViewById(R.id.lv_datosGarantia);
-
+        mapa = findViewById(R.id.mapa);
         inicializarFirebase();
 
-
+        mapa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Perfil.this,gps.class);
+                startActivity(intent);
+            }
+        });
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
