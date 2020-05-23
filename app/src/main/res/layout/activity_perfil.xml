@@ -27,7 +27,13 @@
         tools:layout_editor_absoluteX="149dp"
         tools:layout_editor_absoluteY="87dp" />
 
-    <TextView
+            <Button
+                android:id="@+id/mapa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ver mapa" />
+
+            <TextView
         android:id="@+id/lbl_nombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
